@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/style.css">
+  </head>
+  <body>
+    <div class="form">
+      <div class="validate">
+        <h2>Form validate</h2>
+      </div>
+      <% if (myError.length>0) { %>
+         <div class="row mb-3">
+          <div class="col-6">
+            <ul class="alert alert-danger" style="list-style: none;">
+              <% myError.forEach(element => { %>
+                <li><%= element.msg %></li> 
+            <% }); %>
+            </ul>
+          </div>
+         </div>
+    <% } %>
+      <form action="/saveForm" method="post">
+        <div class="row">
+          <label>User Name</label>
+          <div class="name">
+            <input type="text" class="form-control" name="username" />
+          </div>
+        </div>
+        <div class="row">
+          <label>User Password</label>
+          <div class="name">
+            <input type="password" class="form-control" name="userpass" />
+          </div>
+        </div>
+        <div class="row">
+          <label>User Age</label>
+          <div class="name">
+            <input type="number" class="form-control" name="userage" />
+          </div>
+        </div>
+        <div class="row">
+          <label>User Email</label>
+          <div class="name">
+            <input type="email" class="form-control" name="useremail" />
+          </div>
+        </div>
+        <div class="row">
+          <label>City:</label>
+          <div class="select">
+            <select name="userCity" class="form-control">
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Goa">Goa</option>
+              <option value="Noida">Nioda</option>
+              <option value="Agra">Agra</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="submit">
+            <input type="submit" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
