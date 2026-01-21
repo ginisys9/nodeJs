@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+   <div class="container">
+      <div class="heading">
+        <h1>File Upload </h1>
+      </div>
+      <form action="/saveForm" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col">
+                <label for="nameinput" class="form-label">Name:</label>
+                <input type="text" name="username" id="name">
+            </div>
+            <div class="col" style="margin-top: 20px;">
+                <label for="fileinput" class="form-label">File:</label>
+                <input type="file" name="userfile" id="name">
+            </div>
+            <div class="col" style="margin-top: 20px;">
+                <label for="fileinput" class="form-label">Document File:</label>
+                <input type="file" multiple name="userdocs" id="name">
+            </div>
+            <div>
+             <input type="submit" style="margin-top: 20px;">
+            </div>
+        </div>
+      </form>
+   </div>
+</body>
+</html>
